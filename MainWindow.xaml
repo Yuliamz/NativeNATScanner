@@ -9,11 +9,14 @@
     <Grid>
         <Menu Height="21" VerticalAlignment="Top" Margin="0,0,-0.4,0">
             <MenuItem Header="Archivo">
-                <MenuItem Header="Guardar"/>
-                <MenuItem Header="Salir"/>
+                <MenuItem Header="Guardar" ToolTip="Guardar los resultados obtenidos"/>
+                <MenuItem Header="Salir" ToolTip="Salir de la aplicación"/>
+            </MenuItem>
+            <MenuItem Header="Acciones">
+                <MenuItem Header="Analizar" ToolTip="Buscar redes WiFi cercanas"/>
             </MenuItem>
             <MenuItem Header="Ayuda">
-                <MenuItem Header="Acerca De"/>
+                <MenuItem Header="Acerca De" ToolTip="Mostrar información del autor"/>
             </MenuItem>
         </Menu>
     </Grid>
