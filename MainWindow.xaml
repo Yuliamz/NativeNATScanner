@@ -3,21 +3,76 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns:local="clr-namespace:GiveMeDaShit"
         mc:Ignorable="d"
-        Title="GiveMeDaShit" Height="450" Width="800">
-    <Grid>
-        <Menu Height="21" VerticalAlignment="Top" Margin="0,0,-0.4,0">
-            <MenuItem Header="Archivo">
-                <MenuItem Header="Guardar" ToolTip="Guardar los resultados obtenidos"/>
-                <MenuItem Header="Salir" ToolTip="Salir de la aplicación"/>
+        Title="Give Me Da Shit" Height="690.4" Width="1088" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="Black" Name="Analyze">
+        <Menu Height="40" VerticalAlignment="Top" VerticalContentAlignment="Center">
+            <MenuItem Header="Archivo" VerticalAlignment="Center">
+
+                <MenuItem Header="Guardar" ToolTip="Guardar los resultados obtenidos">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentSave" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Salir" ToolTip="Salir de la aplicación">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ExitToApp" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
-            <MenuItem Header="Acciones">
-                <MenuItem Header="Analizar" ToolTip="Buscar redes WiFi cercanas"/>
+            <MenuItem Header="Opciones" VerticalAlignment="Center">
+                <MenuItem Header="Analizar" ToolTip="Buscar redes WiFi cercanas">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="Wifi" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Scan over the NAT" ToolTip="Scan your router NAT and retrieve the info">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="IpNetwork" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Manually search" ToolTip="Search in the database">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="DatabaseSearch" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
-            <MenuItem Header="Ayuda">
-                <MenuItem Header="Acerca De" ToolTip="Mostrar información del autor"/>
+            <MenuItem Header="Ayuda" VerticalAlignment="Center">
+                <MenuItem Header="Acerca De" ToolTip="Mostrar información de la aplicación">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="About" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
         </Menu>
+
+        <ToolBar Height="50" Margin="-3,39,-1,0" VerticalAlignment="Top" ToolBarTray.IsLocked="True">
+            <materialDesign:PackIcon Kind="Search" Margin="20,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Content="Busqueda rápida"/>
+            <materialDesign:PackIcon Kind="ContentSave"  Margin="20,0,0,0" VerticalAlignment="Center"/>
+            <Button Content="Guardar" />
+            <materialDesign:PackIcon Kind="Upload"  Margin="20,0,0,0" VerticalAlignment="Center"/>
+            <Button Content="Publicar" />
+            <materialDesign:PackIcon Kind="Sync"  Margin="20,0,0,0" VerticalAlignment="Center"/>
+            <Button Content="Sincronizar" />
+            <Button Content="Buscar durante: " Margin="200,0,0,0"/>
+            <TextBox Height="30" TextWrapping="Wrap" Text="20" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <materialDesign:PackIcon Kind="Search" Margin="0,0,0,0" VerticalAlignment="Center"/>
+
+        </ToolBar>
+
     </Grid>
+
+
+
+
 </Window>

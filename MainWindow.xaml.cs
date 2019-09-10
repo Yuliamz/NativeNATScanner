@@ -20,5 +20,10 @@ namespace GiveMeDaShit
         {
             InitializeComponent();
         }
+
+        private void TabItem_StylusEnter(object sender, StylusEventArgs e)
+        {
+
+        }
     }
 }
